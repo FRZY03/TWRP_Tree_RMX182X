@@ -101,22 +101,24 @@ TW_USE_TOOLBOX := true
 TW_OZIP_DECRYPT_KEY := "ACAC1E13A72531AE4A1B22BB31C1CC22"
 
 
-#SHRP_Variables
+# NOTE - Dont use '-' or blank spaces in flag values , otherwise it will create build errors or other bugs in recovery (Excluding SHRP_PATH,SHRP_REC). 
+# Path of your SHRP Tree
 SHRP_PATH := device/realme/RMX1821
+# Maintainer name *
 SHRP_MAINTAINER := FREEZY
+# Device codename *
 SHRP_DEVICE_CODE := RMX1821
+# Recovery Type (It can be treble,normal,SAR) [Only for About Section] *
 SHRP_REC_TYPE := Treble
+# Recovery Type (It can be A/B or A_only) [Only for About Section] *
 SHRP_DEVICE_TYPE := A/B
+# Notch
 SHRP_NOTCH := true
-SHRP_EXPRESS := true
-SHRP_DARK := true
-SHRP_EDL_MODE := 1
-SHRP_EXTERNAL := /external_sd
-SHRP_INTERNAL := /sdcard
-SHRP_OTG := /usb_otg
-SHRP_FLASH := 0
-SHRP_FONP_1 := /sys/class/leds/led:torch_0/brightness
-SHRP_FONP_2 := /sys/class/leds/led:torch_1/brightness
-SHRP_FONP_3 := /sys/class/leds/led:switch/brightness
-SHRP_FLASH_MAX_BRIGHTNESS := 200
+# EDL
+SHRP_EDL_MODE := 0
+SHRP_EXTERNAL := /storage
+SHRP_INTERNAL := /sdcard1
+SHRP_OTG := /usb-otg
+SHRP_FLASH := 1
+# Path
 SHRP_REC := /dev/block/bootdevice/by-name/recovery
